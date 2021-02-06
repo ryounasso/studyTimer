@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -18,9 +18,11 @@
 
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <p class="head">Let's just focus for</p>
+        <div class="row  text-center">
+            <header>
+                <p class="head">Focus for</p>
+            </header>
+            <div class="col-md-12">
                 <div id="timer">00：00.000</div>
                 <div class="controls">
                     <div>
@@ -30,16 +32,18 @@
                         <button id="sta" class="min">Start</button>
                     </div>
                 </div>
+                <div class="left">
+                    <p id="limit">duedate</p>
+                    <p>
+                        <input type="text" id="userYear" maxlength="4">年
+                        <input type="text" id="userMonth" maxlength="2">月
+                        <input type="text" id="userDate" maxlength="2">日
+                        <input type="text" id="userHour" maxlength="2">時 <br>
+                        <input type="button" value="Countdown" onclick="showCountdown();">
+                    </p>
+                </div>
             </div>
         </div>
-        <p id="limit">duedate</p>
-        <p>
-            <input type="text" id="userYear" maxlength="4">年
-            <input type="text" id="userMonth" maxlength="2">月
-            <input type="text" id="userDate" maxlength="2">日
-            <input type="text" id="userHour" maxlength="2">時 <br>
-            <input type="button" value="Countdown" onclick="showCountdown();">
-        </p>
     </div>
     <script src="js/timer.js"></script>
     <script src="js/main.js"></script>

@@ -30,25 +30,25 @@ function showCountdown() {
     var dlHour = targetDate.getHours();
     var dlMin = targetDate.getMinutes();
     var dlSec = targetDate.getSeconds();
-    var msg1 = "期限の" + dlYear + "/" + dlMonth + "/" + dlDate;
+    var msg1 = dlYear + "/" + dlMonth + "/" + dlDate;
 
-    var msg2 = Math.floor(dDays) + "日"
-        + Math.floor(dHour) + "時間";
+    var msg2 = Math.floor(dDays) + " days "
+        + Math.floor(dHour) + " hours ";
     // + Math.floor(dMin) + "分"
     // + Math.floor(dSec) + "秒";
 
     var msg;
     if (dnumTarget > dnumNow) {
         // まだ期限が来ていない場合
-        msg = msg1 + "までは、あと" + msg2 + "です。";
+        msg = "left for " + msg2;
     }
     else {
         // 期限が過ぎた場合
-        msg = msg1 + "は、既に" + msg2 + "前に過ぎました。";
+        msg = msg1 + " Passed";
     }
 
     document.getElementById("limit").innerHTML = msg;
 }
 
-setInterval('showCountdown()', 1000);
+setInterval('showCountdown()', 10000);
 

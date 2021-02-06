@@ -24,7 +24,8 @@
         m = ('0' + m).slice(-2);  //「０」が表示される桁を設定
         s = ('0' + s).slice(-2);
         ms = ('00' + ms).slice(-3);
-        timer.textContent = m + ':' + s + '.' + ms;  //表示される文字列を設定
+        timer.textContent = m + ':' + s;  //表示される文字列を設定
+        // + '.' + ms
 
     }
 
